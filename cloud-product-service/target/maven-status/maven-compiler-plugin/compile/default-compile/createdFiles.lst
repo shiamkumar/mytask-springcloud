@@ -1,0 +1,4 @@
+com\tech\controller\ProductController.class
+com\tech\CloudProductServiceApplication.class
+com\tech\entity\Product.class
+com\tech\repo\ProductRepository.class

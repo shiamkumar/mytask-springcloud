@@ -1,0 +1,44 @@
+
+Inside Git
+----------
+create some directory like microservice-config-repo
+under this directory, create all properties file
+
+application-config.properties (default)
+---------------------------------------
+spring.datasource.url=jdbc:mariadb://localhost:3306/maria
+spring.datasource.username=root
+spring.datasource.password=root@123
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+app.status.message=This is local environment message
+
+application-config-dev.properties
+---------------------------------
+spring.datasource.url=jdbc:mariadb://localhost:3306/dev
+spring.datasource.username=root
+spring.datasource.password=root@123
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+app.status.message=This is dev environment message
+
+application-config-stg.properties
+----------------------------------
+spring.datasource.url=jdbc:mariadb://localhost:3306/stg
+spring.datasource.username=root
+spring.datasource.password=root@123
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+app.status.message=This is stg environment message
+
+application-config-prd.properties
+---------------------------------
+spring.datasource.url=jdbc:mariadb://localhost:3306/prd
+spring.datasource.username=root
+spring.datasource.password=root@123
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+app.status.message=This is prd environment message
+
+
+Config Server Get Request:
+http://localhost:9090/common-configuration/default
+
+Client Service Get Request:
+http://localhost:9292/product/test
